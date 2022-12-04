@@ -22,11 +22,11 @@ func main() {
 		log.Fatal(err)
 	}
 
-	totalSupply, err := instance.TotalSupply(nil)
+	balance, err := instance.BalanceOf(nil, common.HexToAddress("0x9949f7e672a568bB3EBEB777D5e8D1c1107e96E5"))
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Println(totalSupply)
+	fmt.Printf("balance is %d\n", balance)
 
 }
